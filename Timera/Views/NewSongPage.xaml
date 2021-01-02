@@ -1,0 +1,13 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms" xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" x:Class="Timera.Views.NewSongPage">
+             <ContentPage.ToolbarItems>
+                 <ToolbarItem Text="Add New Song" Activated="ToolbarItem_Activated"/>
+             </ContentPage.ToolbarItems>
+    <StackLayout>
+        <Label Text="Song Name" Margin="0, 50, 0, 0" HorizontalOptions="Center"/>
+        <Entry x:Name="SongNameEntry" Placeholder="Song Name" VerticalOptions="Center"/>
+        <Label Text="BPM" HorizontalOptions="Center"/>
+        <Entry x:Name="BPMEntry" Placeholder="BPM" HorizontalOptions="CenterAndExpand" VerticalOptions="Center"/>
+
+    </StackLayout>
+</ContentPage>

@@ -1,0 +1,35 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+            xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+            xmlns:views="clr-namespace:Timera.Views"
+            x:Class="Timera.Views.MainPage"
+           
+             
+            >
+    <ContentPage.ToolbarItems>
+        <ToolbarItem Text="+"
+                     Activated="ToolbarItem_Activated"/>
+    </ContentPage.ToolbarItems>
+    
+  <StackLayout
+      
+       >
+  <ListView x:Name="songListView" ItemSelected="songListView_ItemSelected">
+        <ListView.ItemTemplate>
+            <DataTemplate>
+                <TextCell Text="{Binding Name}"
+                          Detail="{Binding BeatsPerMinute}"
+
+                          />
+            </DataTemplate>
+
+        </ListView.ItemTemplate>
+
+    </ListView>
+      <Label x:Name="SelectedSongName" FontSize="30" HorizontalOptions="Center"/>
+      <Label x:Name="bpmIndicator" Text="-" Padding="50, 0, 50, 0" FontSize="40" TextColor="White" BackgroundColor="Blue" VerticalOptions="CenterAndExpand" HorizontalOptions="Center" />
+      <Button x:Name="StartButton" Padding="25" BackgroundColor="AliceBlue" Text="Start" TextColor="Black" Clicked="StartCounter" IsVisible="True"/>
+      <Button x:Name="StopButton" Text="Stop" TextColor="Black" Clicked="StopCounter" IsVisible="False" />
+     
+  </StackLayout>
+</ContentPage>
